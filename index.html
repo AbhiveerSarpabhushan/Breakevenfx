@@ -1,342 +1,480 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BreakevenFX — Investing Mentorship for Rural India</title>
-  <meta name="description" content="BreakevenFX mentors 200+ students across rural India in investing and trading. $400K raised by students, +15% average profitability, 50+ workshops." />
-  <meta name="theme-color" content="#04060e" />
-  <link rel="canonical" href="https://breakevenfx.com/" />
-  <meta property="og:url" content="https://breakevenfx.com/" />
-  <meta property="og:title" content="BreakevenFX — Markets don't care where you come from." />
-  <meta property="og:description" content="Investing & trading mentorship for rural India. 200+ students. $400K raised. 50+ workshops." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2304060e'/%3E%3Cpath d='M14 44 26 30l8 8 16-20' stroke='%235b9dff' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-  <!-- Preloader -->
-  <div class="preloader" id="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-logo">Breakeven<span>FX</span></div>
-      <div class="preloader-bar"><div class="preloader-bar-fill" id="preloaderFill"></div></div>
-      <div class="preloader-pct mono" id="preloaderPct">0%</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BreakevenFX | Investing mentorship, made personal.</title>
+    <meta
+      name="description"
+      content="One-on-one investing mentorship for low-income college students in India. 200+ students. 10 chapters. 4 states. Learn with BreakevenFX."
+    />
+    <meta name="theme-color" content="#100b1d" />
+    <link rel="canonical" href="https://breakevenfx.com/" />
+    <meta
+      property="og:title"
+      content="BreakevenFX | Investing mentorship, made personal."
+    />
+    <meta
+      property="og:description"
+      content="Financial knowledge. Personal guidance. A community of 200+ students across India."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://breakevenfx.com/" />
+    <meta
+      property="og:image"
+      content="https://breakevenfx.com/assets/photos/students-library.jpg"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/Instrument-Sans.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="announcement">
+      A community for curious minds.
+      <a href="#get-involved">Find your starting point.</a>
     </div>
-  </div>
-
-  <!-- Custom cursor -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <!-- Scroll progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Ambient layers -->
-  <canvas id="scene-canvas"></canvas>
-  <div class="aurora aurora-1"></div>
-  <div class="aurora aurora-2"></div>
-  <div class="aurora aurora-3"></div>
-  <div class="grain"></div>
-  <div class="vignette"></div>
-
-  <!-- Nav -->
-  <header class="nav" id="nav">
-    <a href="#hero" class="nav-logo">Breakeven<span>FX</span></a>
-    <nav class="nav-links">
-      <a href="#mission">Mission</a>
-      <a href="#programs">Programs</a>
-      <a href="#impact">Impact</a>
-      <a href="#voices">Voices</a>
-    </nav>
-    <a href="#join" class="btn btn-small btn-solid" data-magnetic>Join the Program</a>
-    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span></button>
-  </header>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#mission">Mission</a>
-    <a href="#programs">Programs</a>
-    <a href="#impact">Impact</a>
-    <a href="#voices">Voices</a>
-    <a href="#join" class="accent">Join the Program →</a>
-  </div>
-
-  <main>
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="hero-content">
-        <div class="hero-eyebrow rise d1">
-          <span class="pulse-dot"></span> INVESTING MENTORSHIP&nbsp;·&nbsp;RURAL INDIA
+    <header class="site-header">
+      <div class="nav-inner container">
+        <a class="brand" href="#home" aria-label="BreakevenFX home"
+          >breakeven<span>fx</span><span class="brand-dot">.</span></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#about">About us</a><a href="#mentorship">Our mentorship</a
+          ><a href="#impact">Our impact</a><a href="#community">Our community</a
+          ><a href="#get-involved">Get involved</a>
+        </nav>
+        <a class="button button-peach nav-cta" href="#get-involved"
+          >Get in touch <span aria-hidden="true">↗</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="#about">About us</a><a href="#mentorship">Our mentorship</a
+        ><a href="#impact">Our impact</a><a href="#community">Our community</a
+        ><a href="#get-involved">Get involved</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 id="hero-title">Investing mentorship,<br />made personal.</h1>
+            <p>
+              Helping low-income college students in India build financial
+              knowledge, confidence, and a future of their own.
+            </p>
+            <a class="hero-link" href="#mentorship"
+              >Explore our mentorship <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <img
+            class="hero-photo"
+            src="assets/photos/students-library.jpg"
+            alt="Students sharing ideas around a laptop in a library."
+            width="1800"
+            height="1200"
+            fetchpriority="high"
+          />
         </div>
-        <h1 class="hero-title">
-          <span class="line" data-split>Markets don't care</span>
-          <span class="line gradient-text" data-split>where you come from.</span>
-        </h1>
-        <p class="hero-sub rise d4">
-          BreakevenFX teaches investing and trading to students across rural India —
-          turning first-generation learners into confident, profitable market participants.
+      </section>
+      <section class="about container" id="about" aria-labelledby="about-title">
+        <h2 class="eyebrow" id="about-title">ABOUT BREAKEVENFX</h2>
+        <p class="about-statement">
+          Financial education should be within everyone’s reach. We bring
+          one-on-one investing mentorship to low-income college students in
+          India—starting with their questions, their goals, and their potential.
         </p>
-        <div class="hero-cta rise d5">
-          <a href="#join" class="btn btn-solid" data-magnetic>Join the Program <span class="btn-arrow">→</span></a>
-          <a href="#impact" class="btn btn-ghost" data-magnetic>See the Impact</a>
-        </div>
-        <div class="hero-mini-stats rise d6">
-          <div><strong class="mono">200+</strong><span>students</span></div>
-          <div class="divider"></div>
-          <div><strong class="mono">$400K</strong><span>raised</span></div>
-          <div class="divider"></div>
-          <div><strong class="mono">+15%</strong><span>avg. returns lift</span></div>
-        </div>
-      </div>
-      <div class="scroll-hint rise d7">
-        <div class="scroll-hint-line"></div>
-        <span>scroll</span>
-      </div>
-      <!-- Ticker -->
-      <div class="ticker">
-        <div class="ticker-track" id="tickerTrack">
-          <div class="ticker-group">
-            <span class="t-up">NIFTY 50 ▲ 1.24%</span>
-            <span class="t-up">SENSEX ▲ 0.86%</span>
-            <span class="t-brand">BREAKEVENFX · 200+ STUDENTS MENTORED</span>
-            <span class="t-up">BANKNIFTY ▲ 0.92%</span>
-            <span class="t-down">USD/INR ▼ 0.14%</span>
-            <span class="t-brand">$400,000 RAISED BY STUDENTS</span>
-            <span class="t-up">GOLD ▲ 0.47%</span>
-            <span class="t-up">RELIANCE ▲ 1.63%</span>
-            <span class="t-brand">50+ WORKSHOPS HOSTED</span>
-            <span class="t-up">TCS ▲ 0.71%</span>
-            <span class="t-down">CRUDE ▼ 0.38%</span>
-            <span class="t-brand">+15% AVG PROFITABILITY</span>
+      </section>
+      <section class="feature" aria-labelledby="feature-title">
+        <img
+          src="assets/photos/learning-together.jpg"
+          alt="A group exchanging ideas and working together at a table."
+          width="1800"
+          height="1200"
+          loading="lazy"
+        />
+        <div class="feature-shade"></div>
+        <div class="container feature-inner">
+          <div class="feature-copy">
+            <p class="eyebrow">PERSONAL GUIDANCE. SHARED POSSIBILITIES.</p>
+            <h2 id="feature-title">
+              A little support can change how you see your future.
+            </h2>
+            <p>
+              Someone to ask. Space to learn. A mentor who meets you where you
+              are. We make investing education a conversation, with guidance
+              built around each student.
+            </p>
+            <a class="button button-white" href="#get-involved"
+              >Find your starting point <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ STATS ============ -->
-    <section class="stats" id="stats">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat" data-reveal>
-            <div class="stat-value mono"><span data-count="200" data-suffix="+">0</span></div>
-            <div class="stat-label">Students mentored across rural India</div>
-            <div class="stat-bar"><i style="--w:88%"></i></div>
+      </section>
+      <section
+        class="programs"
+        id="mentorship"
+        aria-labelledby="programs-title"
+      >
+        <div class="container">
+          <div class="section-top">
+            <h2 id="programs-title">A foundation for your next chapter.</h2>
+            <p>Learn the fundamentals. Find your confidence. Grow together.</p>
           </div>
-          <div class="stat" data-reveal data-delay="100">
-            <div class="stat-value mono"><span data-count="400" data-prefix="$" data-suffix="K">0</span></div>
-            <div class="stat-label">Total capital raised by students</div>
-            <div class="stat-bar"><i style="--w:96%"></i></div>
-          </div>
-          <div class="stat" data-reveal data-delay="200">
-            <div class="stat-value mono"><span data-count="15" data-prefix="+" data-suffix="%">0</span></div>
-            <div class="stat-label">Average profitability increase per student</div>
-            <div class="stat-bar"><i style="--w:72%"></i></div>
-          </div>
-          <div class="stat" data-reveal data-delay="300">
-            <div class="stat-value mono"><span data-count="50" data-suffix="+">0</span></div>
-            <div class="stat-label">Hands-on workshops hosted</div>
-            <div class="stat-bar"><i style="--w:80%"></i></div>
+          <div class="program-grid">
+            <article class="program-card">
+              <a
+                class="program-photo-link"
+                href="#get-involved"
+                aria-label="Ask about investing foundations"
+                ><img
+                  src="assets/photos/learning-notes.jpg"
+                  alt="A person writing notes in an open notebook."
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+              /></a>
+              <h3>Investing foundations</h3>
+              <p>
+                Understand saving, investing, and risk. Build knowledge you can
+                use in everyday decisions.
+              </p>
+              <a
+                class="round-link"
+                href="#get-involved"
+                aria-label="Enquire about investing foundations"
+                >↗</a
+              >
+            </article>
+            <article class="program-card">
+              <a
+                class="program-photo-link"
+                href="#get-involved"
+                aria-label="Ask about one-on-one mentorship"
+                ><img
+                  src="assets/photos/mentorship.jpg"
+                  alt="Two people reviewing information together on a laptop."
+                  width="1400"
+                  height="933"
+                  loading="lazy"
+              /></a>
+              <h3>One-on-one mentorship</h3>
+              <p>
+                Ask your questions, explore your goals, and learn with someone
+                in your corner.
+              </p>
+              <a
+                class="round-link"
+                href="#get-involved"
+                aria-label="Enquire about one-on-one mentorship"
+                >↗</a
+              >
+            </article>
+            <article class="program-card">
+              <a
+                class="program-photo-link"
+                href="#community"
+                aria-label="Explore our learning community"
+                ><img
+                  src="assets/photos/learning-together.jpg"
+                  alt="People collaborating on laptops around a shared table."
+                  width="1800"
+                  height="1200"
+                  loading="lazy"
+              /></a>
+              <h3>A community to grow with</h3>
+              <p>
+                Connect with other learners through our network of chapters and
+                apprentices.
+              </p>
+              <a
+                class="round-link"
+                href="#community"
+                aria-label="Learn about the community"
+                >↗</a
+              >
+            </article>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============ MISSION ============ -->
-    <section class="mission" id="mission">
-      <div class="container mission-grid">
-        <div class="mission-copy">
-          <div class="section-tag" data-reveal>// THE MISSION</div>
-          <h2 class="section-title" data-reveal data-delay="80">
-            Financial literacy is the most <span class="gradient-text">underpriced asset</span> in rural India.
+      </section>
+      <section
+        class="impact container"
+        id="impact"
+        aria-labelledby="impact-title"
+      >
+        <div class="impact-heading">
+          <p class="eyebrow">OUR IMPACT</p>
+          <h2 id="impact-title">
+            Personal mentorship.<br />A growing community.
           </h2>
-          <p data-reveal data-delay="160">
-            Millions of brilliant young minds grow up hours away from the nearest brokerage,
-            with no one to explain a candlestick, a SIP, or what compounding can do across a decade.
+        </div>
+        <div class="stats-grid">
+          <div><strong>200+</strong><span>students supported</span></div>
+          <div><strong>10</strong><span>community chapters</span></div>
+          <div><strong>4</strong><span>states connected</span></div>
+          <div><strong>15</strong><span>apprentices</span></div>
+        </div>
+        <div class="funding-row">
+          <div>
+            <strong>$400K+</strong
+            ><span>in firm funding secured by mentees</span>
+          </div>
+          <div>
+            <strong>+22%</strong
+            ><span>reported improvement in firm pass rate</span>
+          </div>
+          <p>
+            Figures reported by BreakevenFX. Firm funding and pass rates are
+            distinct from personal investment returns.
           </p>
-          <p data-reveal data-delay="240">
-            BreakevenFX closes that gap. We bring institutional-grade market education to villages —
-            live workshops, real trading labs, and one-on-one mentorship — so the next generation
-            of Indian investors isn't decided by pincode.
+        </div>
+      </section>
+      <section
+        class="community"
+        id="community"
+        aria-labelledby="community-title"
+      >
+        <div class="container community-inner">
+          <img
+            src="assets/photos/students-library.jpg"
+            alt="Students learning from one another in a library."
+            width="1800"
+            height="1200"
+            loading="lazy"
+          />
+          <div class="community-copy">
+            <p class="eyebrow">KNOWLEDGE GOES FURTHER TOGETHER</p>
+            <h2 id="community-title">
+              One student learns.<br />A community moves forward.
+            </h2>
+            <p>
+              Our 10 chapters and 15 apprentices help make financial knowledge
+              more accessible. Students learn from one another, share what they
+              know, and support the next person getting started.
+            </p>
+            <p>
+              The mentorship continues across borders: our founder has supported
+              four students with their personal finances since they moved to
+              the United States.
+            </p>
+            <a class="text-link" href="#get-involved"
+              >Be part of the community <span aria-hidden="true">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="questions container"
+        id="questions"
+        aria-labelledby="questions-title"
+      >
+        <div>
+          <p class="eyebrow">BEFORE YOU GET STARTED</p>
+          <h2 id="questions-title">A few good questions.</h2>
+        </div>
+        <div class="faq-list">
+          <details name="faq">
+            <summary>
+              Who is the mentorship for?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Our focus is low-income college students in India who want
+              to understand investing and build their financial knowledge. No
+              investing background is needed.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>
+              What will I learn?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              We focus on financial foundations, understanding investing and
+              risk, and developing your own judgment through personal guidance.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>
+              Is this a stock-tips service?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              BreakevenFX is an investing education and mentorship community. We
+              help students understand financial ideas and make informed
+              decisions. We don’t offer trading signals or promises of
+              investment returns.
+            </p>
+          </details>
+          <details name="faq">
+            <summary>
+              How can I get involved?<span aria-hidden="true">+</span>
+            </summary>
+            <p>
+              Use the contact section below to introduce yourself. We welcome
+              enquiries from students, people interested in supporting the
+              community, and colleges.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section
+        class="connect"
+        id="get-involved"
+        aria-labelledby="connect-title"
+      >
+        <div class="contact-wrap">
+          <h2 id="connect-title">Connect with BreakevenFX.</h2>
+          <p>
+            Have a question, an idea, or a little time to give?<br />We’d love
+            to hear from you.
           </p>
-          <div class="mission-points">
-            <div class="mission-point" data-reveal data-delay="320">
-              <span class="point-icon">⌖</span>
-              <div><strong>Zero-jargon teaching</strong><p>Concepts in local language first, terminal language second.</p></div>
+          <form
+            id="contact-form"
+            action="mailto:abhiveer.sarpabhushan@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <label class="sr-only" for="interest">What brings you here?</label
+            ><select id="interest" name="interest" required>
+              <option value="" disabled selected>I’m interested in…</option>
+              <option>Student mentorship</option>
+              <option>Supporting the community</option>
+              <option>College partnership</option>
+              <option>General enquiry</option>
+            </select>
+            <div class="name-fields">
+              <div>
+                <label class="sr-only" for="first-name">First name</label
+                ><input
+                  id="first-name"
+                  name="firstName"
+                  autocomplete="given-name"
+                  placeholder="First name"
+                  required
+                  maxlength="100"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="last-name">Last name</label
+                ><input
+                  id="last-name"
+                  name="lastName"
+                  autocomplete="family-name"
+                  placeholder="Last name"
+                  maxlength="100"
+                />
+              </div>
             </div>
-            <div class="mission-point" data-reveal data-delay="400">
-              <span class="point-icon">⇗</span>
-              <div><strong>Real capital, real stakes</strong><p>Students learn to raise, manage, and grow actual money — $400K and counting.</p></div>
-            </div>
-            <div class="mission-point" data-reveal data-delay="480">
-              <span class="point-icon">∞</span>
-              <div><strong>Mentorship for life</strong><p>Every student stays in the network long after the course ends.</p></div>
-            </div>
+            <label class="sr-only" for="email">Your email address</label
+            ><input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="Email address"
+              required
+            />
+            <label class="sr-only" for="message">Your message</label
+            ><textarea
+              id="message"
+              name="message"
+              placeholder="Tell us a little about yourself and how we can help."
+              rows="5"
+              required
+              maxlength="5000"
+            ></textarea>
+            <button class="button button-white" type="submit">
+              Continue to email <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-note">
+              Opens a draft in your email app for you to review and send.
+            </p>
+            <p class="form-status" id="form-status" role="status" hidden>
+              Your draft is ready.
+              <a id="draft-link" href="mailto:abhiveer.sarpabhushan@gmail.com"
+                >Open your email draft ↗</a
+              >
+            </p>
+          </form>
+          <div class="direct-contact">
+            <a href="mailto:abhiveer.sarpabhushan@gmail.com"
+              >abhiveer.sarpabhushan@gmail.com</a
+            ><button
+              type="button"
+              class="copy-email"
+              aria-label="Copy email address"
+            >
+              Copy email
+            </button>
+            <p id="contact-status" role="status"></p>
           </div>
         </div>
-        <div class="mission-visual" data-reveal data-delay="200">
-          <div class="orbit-system">
-            <div class="orbit orbit-a"><span class="orbit-chip">EQUITY</span><span class="orbit-dot"></span></div>
-            <div class="orbit orbit-b"><span class="orbit-chip">RISK&nbsp;MGMT</span><span class="orbit-dot"></span></div>
-            <div class="orbit orbit-c"><span class="orbit-chip">SIP&nbsp;·&nbsp;₹</span><span class="orbit-dot"></span></div>
-            <div class="orbit-core">
-              <span class="orbit-core-glow"></span>
-              <span class="orbit-core-text">B<em>FX</em></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PROGRAMS ============ -->
-    <section class="programs" id="programs">
+      </section>
+      <section class="closing container">
+        <h2>
+          Financial knowledge opens doors.<br />Let’s open more of them,
+          together.
+        </h2>
+        <a class="button button-coral" href="#get-involved"
+          >Start a conversation <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
       <div class="container">
-        <div class="section-tag" data-reveal>// THE PROGRAMS</div>
-        <h2 class="section-title" data-reveal data-delay="80">Built like a trading desk.<br /><span class="gradient-text">Taught like a friend.</span></h2>
-        <div class="program-grid">
-          <article class="program-card" data-tilt data-reveal data-delay="0">
-            <div class="card-glare"></div>
-            <div class="program-num mono">01</div>
-            <h3>Market Foundations</h3>
-            <p>From "what is a share?" to reading charts with confidence. Eight weeks, zero assumptions, all fundamentals.</p>
-            <div class="program-meta mono">8 WEEKS · BEGINNER</div>
-          </article>
-          <article class="program-card" data-tilt data-reveal data-delay="100">
-            <div class="card-glare"></div>
-            <div class="program-num mono">02</div>
-            <h3>Live Trading Lab</h3>
-            <p>Paper-trade real markets in real time. Build a system, journal every trade, and learn discipline before risking a rupee.</p>
-            <div class="program-meta mono">12 WEEKS · INTERMEDIATE</div>
-          </article>
-          <article class="program-card" data-tilt data-reveal data-delay="200">
-            <div class="card-glare"></div>
-            <div class="program-num mono">03</div>
-            <h3>Capital &amp; Funding</h3>
-            <p>The playbook our students used to raise $400,000 — pitching, structuring, and managing real investor capital responsibly.</p>
-            <div class="program-meta mono">6 WEEKS · ADVANCED</div>
-          </article>
-          <article class="program-card" data-tilt data-reveal data-delay="300">
-            <div class="card-glare"></div>
-            <div class="program-num mono">04</div>
-            <h3>1-on-1 Mentorship</h3>
-            <p>A personal roadmap, weekly reviews, and a mentor who's seen your exact chart before. This is where the +15% comes from.</p>
-            <div class="program-meta mono">ONGOING · ALL LEVELS</div>
-          </article>
+        <div class="footer-top">
+          <a class="brand" href="#home" aria-label="BreakevenFX home"
+            >breakeven<span>fx</span><span class="brand-dot">.</span></a
+          >
+          <nav aria-label="Footer navigation">
+            <a href="#about">About us</a><a href="#mentorship">Our mentorship</a
+            ><a href="#impact">Our impact</a
+            ><a href="#community">Our community</a><a href="#questions">FAQs</a
+            ><a class="button button-peach" href="#get-involved"
+              >Get in touch ↗</a
+            >
+          </nav>
+        </div>
+        <a class="footer-email" href="mailto:abhiveer.sarpabhushan@gmail.com"
+          >↗ &nbsp; abhiveer.sarpabhushan@gmail.com</a
+        >
+        <div class="photo-credits">
+          <span
+            >Illustrative photography from
+            <a
+              href="https://unsplash.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Unsplash</a
+            >.</span
+          ><a href="assets/photos/SOURCES.md">Photo sources &amp; credits ↗</a>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="year">2026</span> BreakevenFX. All rights
+            reserved.</span
+          ><span>Financial education &amp; mentorship.</span>
         </div>
       </div>
-    </section>
-
-    <!-- ============ IMPACT ============ -->
-    <section class="impact" id="impact">
-      <div class="container">
-        <div class="section-tag" data-reveal>// THE IMPACT</div>
-        <h2 class="section-title" data-reveal data-delay="80">From one village classroom<br /><span class="gradient-text">to a movement.</span></h2>
-        <div class="timeline">
-          <div class="timeline-line"><i id="timelineFill"></i></div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-node mono">01</div>
-            <div class="timeline-body">
-              <h3>The first classroom</h3>
-              <p>A borrowed room, a whiteboard, and a handful of curious students learning what a stock actually is.</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-reveal data-delay="100">
-            <div class="timeline-node mono">02</div>
-            <div class="timeline-body">
-              <h3>50+ workshops deep</h3>
-              <p>Weekend after weekend, village after village — hands-on sessions covering everything from SIPs to options basics.</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-reveal data-delay="200">
-            <div class="timeline-node mono">03</div>
-            <div class="timeline-body">
-              <h3>$400,000 raised</h3>
-              <p>Students applied the capital playbook and collectively raised four hundred thousand dollars in real funding.</p>
-            </div>
-          </div>
-          <div class="timeline-item" data-reveal data-delay="300">
-            <div class="timeline-node mono">04</div>
-            <div class="timeline-body">
-              <h3>200+ students &amp; counting</h3>
-              <p>An average profitability lift of +15% per student — and a waitlist that keeps growing every cohort.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ VOICES ============ -->
-    <section class="voices" id="voices">
-      <div class="container">
-        <div class="section-tag" data-reveal>// STUDENT VOICES</div>
-        <div class="carousel" data-reveal data-delay="100">
-          <div class="quote-mark">“</div>
-          <div class="slides" id="slides">
-            <blockquote class="slide active">
-              <p>I had never seen a chart in my life. Six months later I run my own swing-trading system and my family asks <em>me</em> about money.</p>
-              <footer><strong>Ravi</strong> · Cohort 3 · Maharashtra</footer>
-            </blockquote>
-            <blockquote class="slide">
-              <p>The capital program changed everything. Our group raised funding most city students only dream about — from our village.</p>
-              <footer><strong>Priya</strong> · Cohort 5 · Rajasthan</footer>
-            </blockquote>
-            <blockquote class="slide">
-              <p>BreakevenFX didn't just teach me trading. It taught me discipline, patience, and that where I was born doesn't decide where I end up.</p>
-              <footer><strong>Arjun</strong> · Cohort 2 · Uttar Pradesh</footer>
-            </blockquote>
-            <blockquote class="slide">
-              <p>My profitability went up more than 15% after the mentorship reviews. The trade journal habit alone was worth it.</p>
-              <footer><strong>Meena</strong> · Cohort 6 · Tamil Nadu</footer>
-            </blockquote>
-          </div>
-          <div class="carousel-dots" id="carouselDots"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ JOIN ============ -->
-    <section class="join" id="join">
-      <div class="container join-inner" data-reveal>
-        <div class="join-glow"></div>
-        <h2 class="join-title">Your village is not a limit.<br /><span class="gradient-text">It's your origin story.</span></h2>
-        <p class="join-sub">Applications for the next cohort are open. Seats are limited — mentorship is personal, not mass-produced.</p>
-        <form class="join-form" id="joinForm" novalidate>
-          <input type="text" id="joinName" placeholder="Your name" autocomplete="name" required />
-          <input type="email" id="joinEmail" placeholder="Email or phone" autocomplete="email" required />
-          <button type="submit" class="btn btn-solid" data-magnetic>Apply Now <span class="btn-arrow">→</span></button>
-        </form>
-        <p class="join-success" id="joinSuccess">✓ You're on the list. We'll reach out before the next cohort opens.</p>
-        <div class="join-foot mono">NEXT COHORT · LIMITED SEATS · NO PRIOR EXPERIENCE NEEDED</div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="footer-marquee">
-      <div class="footer-marquee-track">
-        <span>BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;</span>
-        <span>BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;BREAKEVENFX&nbsp;·&nbsp;</span>
-      </div>
-    </div>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <div class="nav-logo">Breakeven<span>FX</span></div>
-        <p>Investing &amp; trading mentorship for rural India.</p>
-      </div>
-      <div class="footer-links">
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#impact">Impact</a>
-        <a href="#join">Apply</a>
-      </div>
-      <div class="footer-note mono">
-        © 2026 BREAKEVENFX · BUILT WITH CONVICTION IN INDIA
-      </div>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
-  <script type="module" src="scene.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
