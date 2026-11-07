@@ -1,3 +1,15 @@
 {
-  "buildCommand": null
+  "buildCommand": null,
+  "outputDirectory": "offline",
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/removed.html",
+      "status": 410,
+      "headers": {
+        "Cache-Control": "no-store",
+        "X-Robots-Tag": "noindex, nofollow"
+      }
+    }
+  ]
 }
